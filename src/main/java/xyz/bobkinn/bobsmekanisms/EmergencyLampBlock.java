@@ -16,7 +16,7 @@ import org.jetbrains.annotations.Nullable;
 
 public class EmergencyLampBlock extends BaseEntityBlock {
     public EmergencyLampBlock(Properties props) {
-        super(props.lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 15 : 5));
+        super(props.lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 15 : 8));
         this.registerDefaultState(this.defaultBlockState().setValue(BlockStateProperties.LIT, false));
     }
 
