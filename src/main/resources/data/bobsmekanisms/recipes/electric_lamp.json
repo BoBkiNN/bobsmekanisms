@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "III",
+    "G C",
+    "III"
+  ],
+  "key": {
+    "I": { "tag": "forge:ingots/steel" },
+    "G": { "item": "minecraft:glowstone" },
+    "C": { "item": "mekanism:basic_control_circuit" }
+  },
+  "result": {
+    "item": "bobsmekanisms:electric_lamp",
+    "count": 4
+  }
+}
