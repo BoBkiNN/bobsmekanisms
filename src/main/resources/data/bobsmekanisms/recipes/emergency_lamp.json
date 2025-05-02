@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "IKI",
+    "GRC",
+    "TKT"
+  ],
+  "key": {
+    "I": { "tag": "forge:ingots/iron" },
+    "T": { "tag": "forge:ingots/tin" },
+    "G": { "item": "minecraft:glowstone" },
+    "C": { "item": "mekanism:basic_control_circuit" },
+    "K": { "item": "minecraft:glass" }
+  },
+  "result": {
+    "item": "bobsmekanisms:emergency_lamp",
+    "count": 4
+  }
+}

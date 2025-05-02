@@ -1,4 +1,7 @@
 {
   "block.bobsmekanisms.electric_lamp": "Electric Lamp",
-  "item.bobsmekanisms.electric_lamp": "Electric Lamp"
+  "item.bobsmekanisms.electric_lamp": "Electric Lamp",
+
+  "block.bobsmekanisms.emergency_lamp": "Emergency Lamp",
+  "item.bobsmekanisms.emergency_lamp": "Emergency Lamp"
 }

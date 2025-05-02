@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "lit=false": {
+      "model": "bobsmekanisms:block/electric_lamp_off"
+    },
+    "lit=true": {
+      "model": "bobsmekanisms:block/electric_lamp_on"
+    }
+  }
+}

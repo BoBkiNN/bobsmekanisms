@@ -1,20 +1,15 @@
 package xyz.bobkinn.bobsmekanisms;
 
 import com.mojang.logging.LogUtils;
-import net.minecraft.client.renderer.ItemBlockRenderTypes;
-import net.minecraft.client.renderer.RenderType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.material.Material;
 import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,16 +31,29 @@ public class BobsMekanisms {
     public static final RegistryObject<Block> ELECTRIC_LAMP = BLOCKS.register("electric_lamp", () ->
             new ElectricLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(0.3f)
-                    .noOcclusion()
-                    .lightLevel(state -> state.getValue(BlockStateProperties.LIT) ? 15 : 0))
+                    .noOcclusion())
+    );
+
+    public static final RegistryObject<Block> EMERGENCY_LAMP = BLOCKS.register("emergency_lamp", () ->
+            new EmergencyLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
+                    .strength(0.3f)
+                    .noOcclusion())
     );
 
     public static final RegistryObject<BlockEntityType<ElectricLampBE>> ELECTRIC_LAMP_BE =
             BLOCK_ENTITIES.register("electric_lamp", () ->
                     BlockEntityType.Builder.of(ElectricLampBE::new, ELECTRIC_LAMP.get()).build(null));
 
-    public static final RegistryObject<Item> ELECTRIC_LAMP_ITEM = ITEMS.register("electric_lamp",
-            () -> new BlockItem(ELECTRIC_LAMP.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    public static final RegistryObject<BlockEntityType<EmergencyLampBE>> EMERGENCY_LAMP_BE =
+            BLOCK_ENTITIES.register("emergency_lamp", () ->
+                    BlockEntityType.Builder.of(EmergencyLampBE::new, EMERGENCY_LAMP.get()).build(null));
+
+    static {
+        ITEMS.register("electric_lamp",
+                () -> new BlockItem(ELECTRIC_LAMP.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+        ITEMS.register("emergency_lamp",
+                () -> new BlockItem(EMERGENCY_LAMP.get(), new Item.Properties().tab(CreativeModeTab.TAB_REDSTONE)));
+    }
 
     public BobsMekanisms(FMLJavaModLoadingContext ctx) {
         IEventBus modEventBus = ctx.getModEventBus();
