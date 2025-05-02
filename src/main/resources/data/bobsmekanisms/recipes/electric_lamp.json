@@ -3,7 +3,7 @@
   "pattern": [
     "IKI",
     "G C",
-    "III"
+    "IKI"
   ],
   "key": {
     "I": { "tag": "forge:ingots/iron" },
