@@ -1,10 +1,10 @@
 package xyz.bobkinn.bobsmekanisms;
 
-import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -14,15 +14,10 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import org.slf4j.Logger;
 
 @Mod(BobsMekanisms.MOD_ID)
 public class BobsMekanisms {
-
-    // Define mod id in a common place for everything to reference
     public static final String MOD_ID = "bobsmekanisms";
-    // Directly reference a slf4j logger
-    private static final Logger LOGGER = LogUtils.getLogger();
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
@@ -31,13 +26,13 @@ public class BobsMekanisms {
     public static final RegistryObject<Block> ELECTRIC_LAMP = BLOCKS.register("electric_lamp", () ->
             new ElectricLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(0.3f)
-                    .noOcclusion())
+                    .sound(SoundType.GLASS))
     );
 
     public static final RegistryObject<Block> EMERGENCY_LAMP = BLOCKS.register("emergency_lamp", () ->
             new EmergencyLampBlock(BlockBehaviour.Properties.of(Material.GLASS)
                     .strength(0.3f)
-                    .noOcclusion())
+                    .sound(SoundType.GLASS))
     );
 
     public static final RegistryObject<BlockEntityType<ElectricLampBE>> ELECTRIC_LAMP_BE =
