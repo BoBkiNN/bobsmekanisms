@@ -140,6 +140,11 @@ repositories {
             includeGroup "curse.maven"
         }
     }
+
+    maven {
+        name "ModMaven"
+        url "https://modmaven.dev"
+    }
 }
 
 dependencies {
@@ -148,6 +153,7 @@ dependencies {
     annotationProcessor 'org.spongepowered:mixin:0.8.5:processor'
 
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_id}")
+    runtimeOnly fg.deobf("mekanism:Mekanism:1.19.2-${mekanism_version}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
