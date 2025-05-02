@@ -2,7 +2,7 @@
 
 This is my Minecraft mod for Mekanism decorations and utilities.
 
-Currently supports MC 1.19.2
+Currently, supports MC 1.19.2
 
 ## Contents
 - Electric Lamp (Lit if there are FE energy)
