@@ -17,3 +17,4 @@ Yes, that currently all but there are TODO list below:
 - Facades for cables and pipes
 - Casings for cables and pipes
 - Crossings for cables and pipes
+- Supports for cables and pipes
