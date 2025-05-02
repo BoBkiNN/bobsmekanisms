@@ -145,6 +145,10 @@ repositories {
         name "ModMaven"
         url "https://modmaven.dev"
     }
+
+    repositories {
+        maven { url "https://maven.shedaniel.me" }
+    }
 }
 
 dependencies {
@@ -154,6 +158,9 @@ dependencies {
 
     runtimeOnly fg.deobf("curse.maven:jade-324717:${jade_id}")
     runtimeOnly fg.deobf("mekanism:Mekanism:1.19.2-${mekanism_version}")
+    runtimeOnly fg.deobf("me.shedaniel:RoughlyEnoughItems-forge:${rei_version}")
+    runtimeOnly fg.deobf("dev.architectury:architectury-forge:${architectury_version}")
+    runtimeOnly fg.deobf("me.shedaniel.cloth:cloth-config-forge:${cloth_config_version}")
 }
 
 // This block of code expands all declared replace properties in the specified resource targets.
