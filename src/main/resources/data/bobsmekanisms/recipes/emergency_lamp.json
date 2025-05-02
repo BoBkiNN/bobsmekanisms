@@ -10,7 +10,8 @@
     "T": { "tag": "forge:ingots/tin" },
     "G": { "item": "minecraft:glowstone" },
     "C": { "item": "mekanism:basic_control_circuit" },
-    "K": { "item": "minecraft:glass" }
+    "K": { "item": "minecraft:glass" },
+    "R": { "item": "minecraft:redstone"}
   },
   "result": {
     "item": "bobsmekanisms:emergency_lamp",
