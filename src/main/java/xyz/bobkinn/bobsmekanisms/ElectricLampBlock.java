@@ -31,7 +31,7 @@ public class ElectricLampBlock extends BaseEntityBlock {
     }
 
     @Override
-    public @NotNull InteractionResult use(BlockState state, Level level, BlockPos pos, Player p_60506_, InteractionHand p_60507_, BlockHitResult p_60508_) {
+    public @NotNull InteractionResult use(@NotNull BlockState state, Level level, @NotNull BlockPos pos, @NotNull Player p_60506_, @NotNull InteractionHand p_60507_, @NotNull BlockHitResult p_60508_) {
         if (!level.isClientSide) {
             boolean currentlyLit = state.getValue(BlockStateProperties.LIT);
             level.setBlock(pos, state.setValue(BlockStateProperties.LIT, !currentlyLit), 3);
