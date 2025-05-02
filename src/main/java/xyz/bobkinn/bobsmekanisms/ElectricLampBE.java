@@ -39,7 +39,7 @@ public class ElectricLampBE extends BlockEntity {
     @Override
     public void load(@NotNull CompoundTag tag) {
         super.load(tag);
-        energyStorage.deserializeNBT(tag.getCompound("energy"));
+        energyStorage.deserializeNBT(tag.get("energy"));
     }
 
     @Override

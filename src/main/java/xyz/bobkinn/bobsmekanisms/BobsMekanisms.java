@@ -54,12 +54,4 @@ public class BobsMekanisms {
         BLOCK_ENTITIES.register(modEventBus);
         modEventBus.register(this);
     }
-
-    @SubscribeEvent
-    public static void onClientSetup(FMLClientSetupEvent event) {
-        // Force block to be rendered as solid (not cutout/transparent)
-        event.enqueueWork(() -> {
-            ItemBlockRenderTypes.setRenderLayer(ELECTRIC_LAMP.get(), RenderType.solid());
-        });
-    }
 }
